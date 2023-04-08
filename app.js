@@ -28,7 +28,7 @@ document.write(p2.name);
 function main() {
     var prodID = 112
     var price = parseInt(165000,10)
-    var discount = parseInt(5000,10)
+    var discount = parseInt(15,10) // Discount 15 need to be divided by 100 
 
     var prod1 = new Product(prodID, price)
     console.log(prod1.prodID + " price: " + prod1,price)
