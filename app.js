@@ -91,3 +91,64 @@ var p52 = new prsn2("Yuki",26)
 
 document.write("<br>"+ p52.name + "," + p52.age + "," + p52.yearOfBirth())// output to a newline of the DOM
 
+// another example method inside property of an object
+function contact(name, number) {
+    this.name = name
+    this.number = number
+    this.print = checkData
+}
+
+function checkData() {
+    console.log(this.name+": "+this.number)
+}
+
+var a1 = new contact("Kaito", 2525)
+var b1 = new contact("Conan",5236)
+a1.print()
+b1.print()
+
+// Array to store multiple variable
+var course1 = "HTML"
+var course2 = "CSS"
+var course3 = "JS"
+// shorter using an array
+var courses = new Array("HTML","CSS","JS")
+console.log(courses)
+
+// Array example 2
+var courses2 = new Array("IMBA","JS","CSS")
+var course = courses[0] // IMBA
+courses[1] = "TS" // second element changed
+document.write("<br>"+courses2)
+// Array access point
+var arr = new Array(3,6,8)
+console.log(arr[1])
+console.log(arr[5]) // outsute range of an array return "undefined"
+
+// Array change the menu
+function main2(newmenu,numlist) {
+    var menuList = new Array("Pecel","Pizza","Pancake","Omelet","Bread")
+    var index = newmenu // input of a new list replacement
+    var number = numlist
+
+    menuList[number] = index
+    console.log(menuList)
+}
+
+main2("Jengkol",2)
+
+// alternative way creating arrays with fixed index
+var courses4 = new Array(3)
+courses4[0] = "XML"
+courses4[1] = "CS"
+courses4[2] = "ASP.NET"
+
+console.log(courses4)
+// alternative way creating arrays with dynamic index
+var courses5 = new Array()
+courses5[0] = "HTML"
+courses5[1] = "CSS"
+courses5[2] = "JS"
+courses5[3] = "IMBA"
+
+console.log(courses5)
