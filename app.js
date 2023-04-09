@@ -169,15 +169,16 @@ function main45() {
         count++;
     }
     
-    var sum = 0;
+    var sum = 0, count = 0; // must reset count because it changed after first while-loop
     // calculate the sum of points 
-/*    while(count<levels){
+    while(count<levels){
         var sum = sum + points[count];
         count++;
-    } probably cannot run two while inside one main JS*/
-    for (i = 0; i < levels; i++) {
-        sum = sum + points[i]
     }
+/* Alternative without resetting count is using for loop
+   for (i = 0; i < levels; i++) {
+        sum = sum + points[i]
+    }*/
     // output
     console.log(sum);
 }
