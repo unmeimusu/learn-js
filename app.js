@@ -159,7 +159,8 @@ console.log(courses6)
 // 
 function main45() {
     // take the number of passed levels
-    var levels = parseInt(5,10);
+    // var levels = parseInt(readline(),10) /* to convert inputted string to number
+    var levels = 5
     var points = new Array();
     
     var count = 0;
@@ -213,3 +214,8 @@ var n = prompt("Enter a number", "")
 var answer = Math.sqrt(n)
 alert("The square root of " + n + " is " + answer)
 
+const me = async => () => {
+    await (await fetch("https://dummyjson.com/products/")).text()
+}
+
+document.write(me)
