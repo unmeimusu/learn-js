@@ -208,3 +208,8 @@ function calcCentury(input) {
 }
 
 main()
+// prompt to ask an input number, and then sent it to alert
+var n = prompt("Enter a number", "")
+var answer = Math.sqrt(n)
+alert("The square root of " + n + " is " + answer)
+
