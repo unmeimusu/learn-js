@@ -196,3 +196,4 @@ document.write("<br>" + person["age"]);
 document.write("<br>pi: " + Math.PI + "<br>e: " + Math.E + "<br>ln2: " + Math.LN2 + "<br>ln10: " + Math.LN10 + "<br>Log2e: " + Math.LOG2E + "<br>Log10e: " + Math.LOG10E)
 
 // Math object with several methods
+document.write("<br>abs(x): "+Math.abs(-19)+"<br>acos(x): "+Math.acos(45))
