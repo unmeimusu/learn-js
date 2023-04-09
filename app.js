@@ -197,3 +197,14 @@ document.write("<br>pi: " + Math.PI + "<br>e: " + Math.E + "<br>ln2: " + Math.LN
 
 // Math object with several methods
 document.write("<br>abs(x): "+Math.abs(-19)+"<br>sqrt(x): "+Math.sqrt(9)) // more methods not explained here
+// example Math round (to round down) and ceil (to round up)
+function main() {
+    var year = 2023
+    document.write("<br>Century: " + calcCentury(year))
+}
+
+function calcCentury(input) {
+    return Math.ceil(input/100)
+}
+
+main()
