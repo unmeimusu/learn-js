@@ -184,3 +184,10 @@ function main45() {
 }
 
 main45()
+
+// JS doesn't support Associative Arrays, but can use the named array syntax which will produce an object
+
+var person = [];
+person["name"] = "John";
+person["age"] = 46;
+document.write("<br>" + person["age"])
