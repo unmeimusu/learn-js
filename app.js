@@ -152,3 +152,34 @@ courses5[2] = "JS"
 courses5[3] = "IMBA"
 
 console.log(courses5)
+console.log(courses5.length) // length return the number of array's property as an object
+courses6 = courses4.concat(courses5) // combining arrays to join and create an entirely new array 
+console.log(courses6) 
+
+// 
+function main45() {
+    // take the number of passed levels
+    var levels = parseInt(5,10);
+    var points = new Array();
+    
+    var count = 0;
+    while(count<levels){
+        var elem = [4,5,6,7,4]; // in total must be 26
+        points[count] = elem[count];
+        count++;
+    }
+    
+    var sum = 0;
+    // calculate the sum of points 
+/*    while(count<levels){
+        var sum = sum + points[count];
+        count++;
+    } probably cannot run two while inside one main JS*/
+    for (i = 0; i < levels; i++) {
+        sum = sum + points[i]
+    }
+    // output
+    console.log(sum);
+}
+
+main45()
