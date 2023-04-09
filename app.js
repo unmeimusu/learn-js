@@ -190,4 +190,9 @@ main45()
 var person = [];
 person["name"] = "John";
 person["age"] = 46;
-document.write("<br>" + person["age"])
+document.write("<br>" + person["age"]);
+
+// Math object with several properties
+document.write("<br>pi: " + Math.PI + "<br>e: " + Math.E + "<br>ln2: " + Math.LN2 + "<br>ln10: " + Math.LN10 + "<br>Log2e: " + Math.LOG2E + "<br>Log10e: " + Math.LOG10E)
+
+// Math object with several methods
