@@ -249,8 +249,10 @@ function getWeekDay(year, month, day) {
     return names[d.getDay()]
 }
 
-main12() 
+main12()
 
-// DOM to Array
-const el12 = document.getElementById("list")
-document.getElementById("print").innerHTML = el12.lastChild.innerHTML + ", is the child of list"
+// DOM to Array, place the app.js script inside the parent of selected tag id "listp"
+const el12 = document.getElementById("listp")
+document.getElementById("print1").textContent = el12.firstElementChild.textContent + ", is the first child of listss"
+document.getElementById("print2").innerHTML = el12.children[1].innerHTML + ", is the first child of listss"
+document.getElementById("print3").textContent = el12.lastElementChild.innerHTML + ", is the first child of listss"
