@@ -210,7 +210,8 @@ function calcCentury(input) {
 
 main()
 // prompt to ask an input number, and then sent it to alert
-var n = prompt("Enter a number", "")
+// var n = prompt("Enter a number", "")
+var n = 9
 var answer = Math.sqrt(n)
 console.log("The square root of " + n + " is " + answer)
 // async example not yet
@@ -229,22 +230,24 @@ function printTime() {
     var hours = d.getHours();
     var mins = d.getMinutes();
     var secs = d.getSeconds();
-    document.body.innerHTML = hours+": "+mins+": "+secs;
+    document.getElementsByTagName("p").innerHTML = hours+": "+mins+": "+secs;
 }
 setInterval(printTime,1000) // reload every 1 second
 
 function main12() {
- //   var year = parseInt(readline(),10)
-  //  var month = parseInt(readline(),10)
-    var day = parseInt(readline(),10)
+    var year = parseInt(2023,10)
+    var month = parseInt(11,10)
+    var day = parseInt(5,10)
 
     console.log(getWeekDay(year, month, day))
 }
 
 function getWeekDay(year, month, day) {
-    const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"]
+    const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     var d = new Date(year, month, day)
 
     return names[d.getDay()]
 }
+
+main12() 
 
