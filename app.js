@@ -214,8 +214,11 @@ var n = prompt("Enter a number", "")
 var answer = Math.sqrt(n)
 alert("The square root of " + n + " is " + answer)
 // async example not yet
-const me = async => () => {
-    await (await fetch("https://dummyjson.com/products/")).text()
-}
+const me42 = await fetch("https://dummyjson.com/products")
+document.write(me42())
+console.log(me42)
 
-document.write(me)
+function myAlert() {
+    alert("Hi")
+}
+setInterval(myAlert,3000) // call the function every 3 seconds
