@@ -218,7 +218,11 @@ const me42 = async () => await (await fetch("https://dummyjson.com/products")).j
 document.write(me42())
 console.log(me42)
 
-function myAlert() {
-    alert("Hi")
+function myIntervalLogging()) {
+    console.log("Hi")
 }
-setInterval(myAlert,3000) // call the function every 3 seconds
+// setInterval(myAlert,3000) // call the function every 3 seconds
+
+var d = new Date()
+var hours = d.getHours()
+console.log(hours)
