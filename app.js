@@ -253,4 +253,4 @@ main12()
 
 // DOM to Array
 const el12 = document.getElementById("list")
-document.getElementById("print").innerHTML = el12.children.last + ", is the child of list"
+document.getElementById("print").innerHTML = el12.lastChild.innerHTML + ", is the child of list"
