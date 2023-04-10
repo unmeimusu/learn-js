@@ -261,3 +261,6 @@ document.getElementById("print3").textContent = el12.lastElementChild.innerHTML 
 // Changing attributes elements
 var el = document.getElementById("myimg")
 el.src = "./images.png"
+// Selected based on Array index
+var ell = document.getElementsByTagName("a")
+ell[1].href = "https://www.google.com"
