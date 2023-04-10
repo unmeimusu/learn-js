@@ -234,6 +234,7 @@ function printTime() {
 }
 setInterval(printTime,1000) // reload every 1 second
 
+// 
 function main12() {
     var year = parseInt(2023,10)
     var month = parseInt(11,10)
@@ -253,6 +254,6 @@ main12()
 
 // DOM to Array, place the app.js script inside the parent of selected tag id "listp"
 const el12 = document.getElementById("listp")
-document.getElementById("print1").textContent = el12.firstElementChild.textContent + ", is the first child of listss"
-document.getElementById("print2").innerHTML = el12.children[1].innerHTML + ", is the first child of listss"
-document.getElementById("print3").textContent = el12.lastElementChild.innerHTML + ", is the first child of listss"
+document.getElementById("print1").textContent = el12.firstElementChild.textContent + ", is the first child of listp <br><br>"
+document.getElementById("print2").innerHTML = el12.children[1].innerHTML + ", is the second child of listp <br><br>"
+document.getElementById("print3").textContent = el12.lastElementChild.innerHTML + ", is the last child of listp <br><br>"
