@@ -212,17 +212,39 @@ main()
 // prompt to ask an input number, and then sent it to alert
 var n = prompt("Enter a number", "")
 var answer = Math.sqrt(n)
-alert("The square root of " + n + " is " + answer)
+console.log("The square root of " + n + " is " + answer)
 // async example not yet
 const me42 = async () => await (await fetch("https://dummyjson.com/products")).json()
 document.write(me42())
 console.log(me42)
 
-function myIntervalLogging()) {
+function myIntervalLogging() {
     console.log("Hi")
 }
 // setInterval(myAlert,3000) // call the function every 3 seconds
 
-var d = new Date()
-var hours = d.getHours()
-console.log(hours)
+// print current time in hours, minutes, and seconds
+function printTime() {
+    var d = new Date()
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    document.body.innerHTML = hours+": "+mins+": "+secs;
+}
+setInterval(printTime,1000) // reload every 1 second
+
+function main12() {
+ //   var year = parseInt(readline(),10)
+  //  var month = parseInt(readline(),10)
+    var day = parseInt(readline(),10)
+
+    console.log(getWeekDay(year, month, day))
+}
+
+function getWeekDay(year, month, day) {
+    const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"]
+    var d = new Date(year, month, day)
+
+    return names[d.getDay()]
+}
+
