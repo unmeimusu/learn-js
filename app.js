@@ -214,7 +214,7 @@ var n = prompt("Enter a number", "")
 var answer = Math.sqrt(n)
 alert("The square root of " + n + " is " + answer)
 // async example not yet
-const me42 = await fetch("https://dummyjson.com/products")
+const me42 = async () => await (await fetch("https://dummyjson.com/products")).json()
 document.write(me42())
 console.log(me42)
 
