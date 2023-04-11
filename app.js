@@ -284,3 +284,4 @@ p.append(node) // same as p.appendChild(node)
 
 var div = document.getElementById("listp")
 div.append(p) // same as div.appendChild(p)
+
