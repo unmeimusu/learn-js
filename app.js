@@ -285,3 +285,10 @@ p.append(node) // same as p.appendChild(node)
 var div = document.getElementById("listp")
 div.append(p) // same as div.appendChild(p)
 
+// Removing tag "span" inside "listp"
+var child = document.getElementById("r")
+// 1st alternative
+// var p2 = document.getElementById("listp")
+// p2.removeChild(child)
+// 2nd alternative : shorter
+child.parentNode.removeChild(child)
