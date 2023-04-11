@@ -335,17 +335,18 @@ yz.onchange = function () {
 
 // Event Listener, IE8 or lower using document.attachEvent()
 var xz = document.getElementById("el")
-xz.addEventListener("click",clickFunc())
+xz.addEventListener("click",clickFunc)
 function clickFunc() {
     console.log("click function from event listener!")
 }
-xz.addEventListener("mouseover",moverFunc())
+xz.addEventListener("mouseover",moverFunc)
 function moverFunc() {
     console.log("mouse over function from event listener!")
 }
 
 var rel = document.getElementById("rmEL")
-rel.removeEventListener("click",rmelFunc())
+rel.addEventListener("click",rmelFunc)
 function rmelFunc() {
-    
+    xz.removeEventListener("mouseover",moverFunc)
+    console.log("mouse over function removed!")
 }
