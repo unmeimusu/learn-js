@@ -381,3 +381,17 @@ function prev() {
     }
     yu.src = images[num]
 }
+
+// Form Validation
+var ip1 = document.getElementById("ipt1")
+var ip2 = document.getElementById("ipt2")
+function validate() {
+    var r = document.getElementById("result")
+    if(ip1.value == "" || ip2.value == "" ) {
+        r.innerHTML = "<b style='color: red;'>Please fill the form</b>"
+    } else if (ip1.value !== ip2.value) {
+        r.innerHTML = "<b style='color: red'>The text must be same</b>"
+    } else {
+        r.innerHTML = "<b style='color: green'>Correct, Thanks!</b>"
+    }
+}
