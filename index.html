@@ -40,12 +40,12 @@
         <img id="imgs" style="height: 300px; width: 300px;" src="images.png" alt=""/>
         <button id="nb" onclick="next()">Next</button>
     </div>
-    <div id="valid">
+    <form id="valid" onsubmit="return validate()">
         <p>Input: <input id="ipt1" type="text"></p>
         <p>Repeat: <input id="ipt2" type="text"></p>
-        <button type="submit" onclick="validate()">Validate</button>
+        <p>Press button: <input type="submit" value="Submit" /></p>
         <span id="result"></span>
-    </div>
+    </form>
     <script src="./app.js"></script>
 </body>
 </html>

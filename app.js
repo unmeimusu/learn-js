@@ -396,4 +396,5 @@ function validate() {
     } else {
         r.innerHTML = "<b style='color: green'>Correct, Thanks!</b>"
         return true // validation
+    }
 }
