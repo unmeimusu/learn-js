@@ -290,3 +290,43 @@ var child = document.getElementById("r")
 // p2.removeChild(child)
 // 2nd alternative : shorter
 child.parentNode.removeChild(child)
+
+// Replacing elements
+var p22 = document.createElement("p")
+var node22 = document.createTextNode("This is a new node replacement")
+p22.appendChild(node22)
+
+var getP = document.getElementById("listp")
+var childP = document.getElementById("p4")
+getP.replaceChild(p22, childP)
+
+// Animations + style.css
+window.onload = function () {
+    var pos = 0
+    var sbox = document.getElementById("small-box")
+    var t = setInterval(move,10)
+
+    function move() {
+        if(pos >= 150) {
+            clearInterval(t);
+        }
+        else {
+            pos += 1;
+            sbox.style.left = pos + 'px';
+        }
+    }
+/*  function move() {
+        if(pos > 149 || pos <= 0) {
+            clearInterval(t);
+        }
+        else if (pos < 150) {
+            pos += 1;
+            sbox.style.left = pos + "px";
+        }
+        else if (pos = 150) {
+            pos -= 1;
+            sbox.style.left = pos + "px";
+        }
+
+    }*/
+}

@@ -1,0 +1,13 @@
+#box {
+    display: relative;
+    width: 250px;
+    height: 200px;
+    background-color: blue;
+}
+
+#small-box {
+    display: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
