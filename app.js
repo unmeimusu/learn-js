@@ -280,7 +280,7 @@ for (i = 0; i < s.length; i++) {
 // Adding tag and content
 var p = document.createElement("p")
 var node = document.createTextNode("Hello, I'm a new paragraph")
-p.appendChild(node)
+p.append(node) // same as p.appendChild(node)
 
 var div = document.getElementById("listp")
-div.appendChild(p)
+div.append(p) // same as div.appendChild(p)
