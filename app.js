@@ -318,3 +318,6 @@ window.onload = function () {
 }
 
 // events handler
+function show() {
+    alert("Hi there")
+}
