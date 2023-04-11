@@ -271,8 +271,16 @@ x.style.color = "brown"
 x.style.width = "100px"
 x.style.backgroundColor = "yellow"
 
-// changing all paragraph color inside listp
+// Changing all paragraph background color inside listp
 var s = document.getElementsByTagName("p")
 for (i = 0; i < s.length; i++) {
     s[i].style.backgroundColor = "lightblue"
 }
+
+// Adding tag and content
+var p = document.createElement("p")
+var node = document.createTextNode("Hello, I'm a new paragraph")
+p.appendChild(node)
+
+var div = document.getElementById("listp")
+div.appendChild(p)
