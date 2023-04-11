@@ -305,28 +305,14 @@ window.onload = function () {
     var pos = 0
     var sbox = document.getElementById("small-box")
     var t = setInterval(move,10)
-
+    
     function move() {
-        if(pos >= 150) {
+        if(pos > 200 || pos < 0) {
             clearInterval(t);
         }
-        else {
+        if (pos < 200) {
             pos += 1;
-            sbox.style.left = pos + 'px';
+            sbox.style.left = pos + "px";
         }
     }
-/*  function move() {
-        if(pos > 149 || pos <= 0) {
-            clearInterval(t);
-        }
-        else if (pos < 150) {
-            pos += 1;
-            sbox.style.left = pos + "px";
-        }
-        else if (pos = 150) {
-            pos -= 1;
-            sbox.style.left = pos + "px";
-        }
-
-    }*/
 }
