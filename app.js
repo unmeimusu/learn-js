@@ -215,7 +215,7 @@ var n = 9
 var answer = Math.sqrt(n)
 console.log("The square root of " + n + " is " + answer)
 // async example not yet
-const me42 = async () => await (await fetch("https://dummyjson.com/products")).json()
+const me42 = async () => await (await fetch("https://dummyjson.com/products/")).json()
 document.write(me42())
 console.log(me42)
 
@@ -321,8 +321,8 @@ window.onload = function () {
 function show() {
     alert("Hi there")
 }
-// or
+// one tag can contain more than one event handler
 var xy = document.getElementById("bton")
-x.onclick = function () {
-    document.body.innerHTML = Date()
+xy.onclick = function () {
+    console.log(new Date())
 }
