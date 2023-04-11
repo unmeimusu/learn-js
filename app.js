@@ -234,7 +234,7 @@ function printTime() {
 }
 setInterval(printTime,1000) // reload every 1 second
 
-// 
+// Get a day name on a date time
 function main12() {
     var year = parseInt(2023,10)
     var month = parseInt(11,10)
@@ -242,14 +242,12 @@ function main12() {
 
     console.log(getWeekDay(year, month, day))
 }
-
 function getWeekDay(year, month, day) {
     const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     var d = new Date(year, month, day)
 
     return names[d.getDay()]
 }
-
 main12()
 
 // DOM to Array, place the app.js script inside the parent of selected tag id "listp"
