@@ -346,7 +346,38 @@ function moverFunc() {
 
 var rel = document.getElementById("rmEL")
 rel.addEventListener("click",rmelFunc)
+rel.addEventListener("mouseover",moverFunc)
 function rmelFunc() {
     xz.removeEventListener("mouseover",moverFunc)
     console.log("mouse over function removed!")
+}
+
+// Event Propagation : bubbling (default) & capturing
+rel.addEventListener("mouseover",moverFunc,true) // capturing
+xz.addEventListener("mouseover",moverFunc,false) // bubbling
+
+// Slider
+var images = [
+    "images.png",
+    "images1.png",
+    "images2.jpeg"
+]
+
+var yu = document.getElementById("imgs")
+console.log(images.length)
+var num = 0
+function next() {
+    num++
+    if (num >= images.length) {
+        num = 0
+    }
+    yu.src = images[num]
+}
+
+function prev() {
+    num--
+    if (num < 0) {
+        num = images.length - 1
+    }
+    yu.src = images[num]
 }

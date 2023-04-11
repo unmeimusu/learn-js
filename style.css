@@ -11,3 +11,12 @@
     height: 50px;
     background-color: red;
 }
+
+#slider {
+    position: relative;
+}
+
+#pb,#nb {
+    position: absolute;
+    bottom: 0px
+}
