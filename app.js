@@ -264,3 +264,15 @@ el.src = "./images.png"
 // Selected based on Array index
 var ell = document.getElementsByTagName("a")
 ell[1].href = "https://www.google.com"
+
+// Changing style object value
+var x = document.getElementById("demo")
+x.style.color = "brown"
+x.style.width = "100px"
+x.style.backgroundColor = "yellow"
+
+// changing all paragraph color inside listp
+var s = document.getElementsByTagName("p")
+for (i = 0; i < s.length; i++) {
+    s[i].style.backgroundColor = "lightblue"
+}
