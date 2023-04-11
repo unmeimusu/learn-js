@@ -321,3 +321,8 @@ window.onload = function () {
 function show() {
     alert("Hi there")
 }
+// or
+var xy = document.getElementById("bton")
+x.onclick = function () {
+    document.body.innerHTML = Date()
+}
