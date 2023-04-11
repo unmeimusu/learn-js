@@ -398,3 +398,7 @@ function validate() {
         return true // validation
     }
 }
+
+// Checking child nodes inside an element
+var el6 = document.getElementById("valid")
+console.log(el6.hasChildNodes()) // works with getElementById
