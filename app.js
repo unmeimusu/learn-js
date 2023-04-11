@@ -300,12 +300,12 @@ var getP = document.getElementById("listp")
 var childP = document.getElementById("p4")
 getP.replaceChild(p22, childP)
 
-// Animations + style.css
+// Animations + style.css with window.onload event handler
 window.onload = function () {
     var pos = 0
     var sbox = document.getElementById("small-box")
     var t = setInterval(move,10)
-    
+
     function move() {
         if(pos > 200 || pos < 0) {
             clearInterval(t);
@@ -316,3 +316,5 @@ window.onload = function () {
         }
     }
 }
+
+// events handler
