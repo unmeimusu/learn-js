@@ -321,8 +321,14 @@ window.onload = function () {
 function show() {
     alert("Hi there")
 }
-// one tag can contain more than one event handler
+// one tag can contain more than one event handler as long as not from same event name
 var xy = document.getElementById("bton")
 xy.onclick = function () {
     console.log(new Date())
+}
+
+// event handler on input
+var yz = document.getElementById("ipt")
+yz.onchange = function () {
+    yz.value = yz.value.toUpperCase()
 }
