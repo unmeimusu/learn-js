@@ -317,7 +317,7 @@ window.onload = function () {
     }
 }
 
-// events handler
+// Events Handler
 function show() {
     alert("Hi there")
 }
@@ -327,8 +327,10 @@ xy.onclick = function () {
     console.log(new Date())
 }
 
-// event handler on input
+// Event Handler on input
 var yz = document.getElementById("ipt")
 yz.onchange = function () {
     yz.value = yz.value.toUpperCase()
 }
+
+// Event Listener
