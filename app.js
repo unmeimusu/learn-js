@@ -364,7 +364,7 @@ var images = [
 ]
 
 var yu = document.getElementById("imgs")
-console.log(images.length)
+console.log(images.length + " is a number of image in slider")
 var num = 0
 function next() {
     num++
