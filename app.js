@@ -352,7 +352,7 @@ function rmelFunc() {
     console.log("mouse over function removed!")
 }
 
-// Event Propagation : bubbling (default) & capturing
+// Event Propagation : bubbling (default) & capturing, need more example
 rel.addEventListener("mouseover",moverFunc,true) // capturing
 xz.addEventListener("mouseover",moverFunc,false) // bubbling
 
