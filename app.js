@@ -402,3 +402,20 @@ function validate() {
 // Checking child nodes inside an element
 var el6 = document.getElementById("valid")
 console.log(el6.hasChildNodes()) // works with getElementById
+
+// local storage & session storage
+// set item
+/*
+localStorage.setItem("person1",JSON.stringify({"id":1,"notes":["Say Hello","Cheers"]}))
+
+const upitem = localStorage.getItem("person1")
+const pItem = JSON.parse(upitem)
+yuyu.innerHTML = pItem
+yuyu.textContent = upitem */
+
+var yuyu = document.getElementById("ls")
+localStorage.setItem("person1",JSON.stringify({"id":1,"notes":["Say Hello","Cheers"]}));
+const upitem = localStorage.getItem("person1");
+const pItem = JSON.parse(upitem);
+yuyu.innerHTML = upitem.id; // innerHTML parsed object
+console.log(pItem["notes"])
