@@ -419,3 +419,4 @@ const upitem = localStorage.getItem("person1");
 const pItem = JSON.parse(upitem);
 yuyu.innerHTML = upitem.id; // innerHTML parsed object
 console.log(pItem["notes"])
+
