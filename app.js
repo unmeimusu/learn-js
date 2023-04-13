@@ -479,13 +479,13 @@ let obj3 = {a: 1, b: 2, c: 3}
 for (let v in obj3) {
     console.log(v)
 }
-// for...of
+// for...of (array, Map, Set, WeakMap, and WeakSet)
 console.log("For Of Loop ES6 obj:")
 let obj4 = ["x","y","z"]
 for (const iterator of obj4) {
     console.log(iterator)
 }
-// example for...of loop to an array
+// example for...of loop
 let scores = [68,95,54,84,77,75,63,74,69,80,71,63]
 let total = 0
 for (let val of scores) {
@@ -495,10 +495,19 @@ for (let val of scores) {
 }
 console.log(total)
 
-(function (a){
-    return (function (){
-        console.log(a)
-        a = 6
-    })()
-})(21)
-    
+// Arrow function
+// Simple Arrow Function with function name & parameter
+const add = (x, y) => {
+    let sum = x + y;  
+    console.log("Arrow Funct with parameters:"sum);
+  }
+const greet = x => "Welcome " + x;
+console.log("Arrow Func with a parameter: ",greet("Vix"))
+// Shorter Arrow Function with function name
+const x = () => alert("Hi");
+x();
+
+// Shorter Arrow Function with parameter
+const arr = [2, 3, 7, 8];
+console.log("Arrow Func with parameter:")
+arr.forEach(v => console.log(v * 2));
