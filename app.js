@@ -531,7 +531,7 @@ var a25 = {x25: 1, x25: 2, x25: 3, x25: 4};
 console.log("Object data ES6: " + physicTest.height + ", " + physicTest.health + ", Latest Duplicate Data: " + a25.x25 + " \'Growing Height\'", physicTest.grow())
 console.log("Updated Height: " + physicTest.height)
 
-// Computed Property Names on Object ES6
+// Computed Property Names in Object ES6
 let prop = "name"
 let id = "1234"
 let mobile = "08923"
@@ -556,3 +556,5 @@ var config = {
     ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
 }
 console.log("mobileSize: ", config.mobileSize)
+
+// Object Assign in ES6
