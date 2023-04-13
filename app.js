@@ -558,3 +558,15 @@ var config = {
 console.log("mobileSize: ", config.mobileSize)
 
 // Object Assign in ES6
+let person111 = {
+    name: 'Jim',
+    age: 18,
+    gender: 'male'
+};
+let person222 = {
+    name: 'Bob',
+    age: 20,
+    class: 2
+}
+let newMember = Object.assign({}, person222, person111) // Person111 overrides the properties value.
+console.log(newMember.name + ", " + newMember.age + ", " + newMember.gender + ", " + newMember.class) // Jim, 18, male, 2
