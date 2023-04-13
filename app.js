@@ -568,5 +568,24 @@ let person222 = {
     age: 20,
     class: 2
 }
-let newMember = Object.assign({}, person222, person111) // Person111 overrides the properties value.
+let newMember = Object.assign({}, person222, person111) // Person111 overrides the properties value & person222 properties will listed first.
 console.log(newMember.name + ", " + newMember.age + ", " + newMember.gender + ", " + newMember.class) // Jim, 18, male, 2
+for (let mem in newMember) {
+    console.log(newMember[mem]) // will print the list of values
+    console.log(mem) // will print the list of properties
+}
+
+// Mutated Object
+let someone = {
+    name: "Tom",
+    age: 7
+}
+
+let newOne = someone // someone values will be updated as reference
+newOne.name = "Jerry"
+console.log("Reference 1.",someone.name) // Jerry
+console.log("Reference 1.",newOne.name) // Jerry
+let anotherOne = Object.assign({},someone,{name: "Spike"}) // mutating object to prevent original object as reference
+console.log("Mutate 2.",anotherOne.name) // Spike
+console.log("Mutate 2.",someone.name,someone.age) // Jerry 7
+
