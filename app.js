@@ -467,13 +467,30 @@ let msg3 = `The sum is ${a3+b3}`
 console.log(msg3)
 
 // loop in ES6
+// for loop
+console.log("For Loop ES6 arr:")
 let arrb = [1,2,3]
 for (let k = 0; k < arrb.length; k++) {
-    console.log("Loop ES6 arr:")
     console.log(arr[k])
 }
+// for...in loop not for Array
+console.log("For In Loop ES6 obj:")
 let obj3 = {a: 1, b: 2, c: 3}
 for (let v in obj3) {
-    console.log("Loop ES6 obj:")
     console.log(v)
 }
+// for...of
+console.log("For Of Loop ES6 obj:")
+let obj4 = ["x","y","z"]
+for (const iterator of obj4) {
+    console.log(iterator)
+}
+// example for...of loop to an array
+let scores = [68,95,54,84,77,75,63,74,69,80,71,63]
+let total = 0
+for (let val of scores) {
+    if (val >= 70) {
+        total++
+    }
+}
+console.log(total)
