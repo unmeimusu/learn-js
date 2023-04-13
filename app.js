@@ -465,3 +465,15 @@ let a3 = 8
 let b3 = 34
 let msg3 = `The sum is ${a3+b3}`
 console.log(msg3)
+
+// loop in ES6
+let arrb = [1,2,3]
+for (let k = 0; k < arrb.length; k++) {
+    console.log("Loop ES6 arr:")
+    console.log(arr[k])
+}
+let obj3 = {a: 1, b: 2, c: 3}
+for (let v in obj3) {
+    console.log("Loop ES6 obj:")
+    console.log(v)
+}
