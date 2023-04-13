@@ -541,7 +541,7 @@ let user = {
     [`user_${id}`]: `${mobile}`
 }
 console.log(user.name + ", " + user.user_1234)
-// Example Computed Property Names 
+// Example Computed Property Names with operation
 var ii = 0
 var a = {
     ['foo' + ++ii]: ii,
@@ -549,3 +549,10 @@ var a = {
     ['foo' + ++ii]: ii,
 }
 console.log(a.foo1 + ", " + a.foo2 + ", " + a.foo3)
+// Example Computed Property with transformation
+var param = "size"
+var config = {
+    [param]: 12,
+    ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+}
+console.log("mobileSize: ", config.mobileSize)
