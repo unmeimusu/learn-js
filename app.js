@@ -510,3 +510,9 @@ x45();
 const arr45 = [2, 3, 7, 8];
 console.log("Arrow Func with parameter:")
 arr45.forEach(v => console.log(v * 2));
+
+// Default Parameters
+const test = (a, b = 3, c = 42) => {
+    return a + b + c;
+  }
+console.log("Default Parameter: ",test(5)); //50 
