@@ -499,15 +499,14 @@ console.log(total)
 // Simple Arrow Function with function name & parameter
 const add = (x, y) => {
     let sum = x + y;  
-    console.log("Arrow Funct with parameters:"sum);
+    console.log("Arrow Funct with parameters:",sum);
   }
 const greet = x => "Welcome " + x;
 console.log("Arrow Func with a parameter: ",greet("Vix"))
 // Shorter Arrow Function with function name
-const x = () => alert("Hi");
-x();
-
+const x45 = () => console.log("Hi, I'm an arrow function with name");
+x45();
 // Shorter Arrow Function with parameter
-const arr = [2, 3, 7, 8];
+const arr45 = [2, 3, 7, 8];
 console.log("Arrow Func with parameter:")
-arr.forEach(v => console.log(v * 2));
+arr45.forEach(v => console.log(v * 2));
