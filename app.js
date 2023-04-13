@@ -494,3 +494,11 @@ for (let val of scores) {
     }
 }
 console.log(total)
+
+(function (a){
+    return (function (){
+        console.log(a)
+        a = 6
+    })()
+})(21)
+    
