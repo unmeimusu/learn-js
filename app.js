@@ -215,9 +215,9 @@ var n = 9
 var answer = Math.sqrt(n)
 console.log("The square root of " + n + " is " + answer)
 // async example not yet
-const me42 = async () => await (await fetch("https://dummyjson.com/products/")).json()
+/* const me42 = async () => await (await fetch("https://dummyjson.com/products/")).json()
 document.write(me42())
-console.log(me42)
+console.log(me42) */
 
 function myIntervalLogging() {
     console.log("Hi")
@@ -416,7 +416,52 @@ yuyu.textContent = upitem */
 var yuyu = document.getElementById("ls")
 localStorage.setItem("person1",JSON.stringify({"id":1,"notes":["Say Hello","Cheers"]}));
 const upitem = localStorage.getItem("person1");
-const pItem = JSON.parse(upitem);
-yuyu.innerHTML = upitem.id; // innerHTML parsed object
+let pItem = JSON.parse(upitem);
+yuyu.innerHTML = upitem; // innerHTML parsed object, data privacy
 console.log(pItem["notes"])
 
+// Know More ES6 : Variable Initialization and Declaration
+var a = 10; // not scoped
+const b = 'hello'; // not reassignable
+let c = true; // scoped
+
+if (true) {
+    let name = "Jack" // let will be scoped
+}
+console.log(name); // empty, alert with no value
+
+// The difference between var & let
+var xyz = document.getElementById("es6")
+function varTest() {
+    var x = 1
+    if (true) {
+        var x = 2
+        console.log("var inside scope: ",x) // 2
+    }
+    console.log("var outside scope: ",x) // 2
+}
+function letTest() {
+    let x = 1
+    if (true) {
+        let x = 2
+        console.log("let inside scope: ",x) // 2
+    }
+    console.log("let outside scope: ",x) // 1
+}
+varTest()
+letTest()
+
+// Template Literals in ES6
+// 1
+let n1 = 'Jim'
+let msg1 = 'Welcome ' + n1 + '!'
+console.log(msg1)
+// 2
+let n2 = 'Dud'
+let msg2 = `Welcome ${n2}`
+console.log(msg2)
+// 3
+let a3 = 8
+let b3 = 34
+let msg3 = `The sum is ${a3+b3}`
+console.log(msg3)
