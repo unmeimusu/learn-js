@@ -516,3 +516,36 @@ const test = (a, b = 3, c = 42) => {
     return a + b + c;
   }
 console.log("Default Parameter: ",test(5)); //50 
+
+// Object on ES6 contain properties or methods
+let height = 5
+let health = 100
+let physicTest = {
+    height,
+    health,
+    grow() {
+        this.height +=2
+    }
+}
+var a25 = {x25: 1, x25: 2, x25: 3, x25: 4};
+console.log("Object data ES6: " + physicTest.height + ", " + physicTest.health + ", Latest Duplicate Data: " + a25.x25 + " \'Growing Height\'", physicTest.grow())
+console.log("Updated Height: " + physicTest.height)
+
+// Computed Property Names on Object ES6
+let prop = "name"
+let id = "1234"
+let mobile = "08923"
+
+let user = {
+    [prop]: "Jack",
+    [`user_${id}`]: `${mobile}`
+}
+console.log(user.name + ", " + user.user_1234)
+// Example Computed Property Names 
+var ii = 0
+var a = {
+    ['foo' + ++ii]: ii,
+    ['foo' + ++ii]: ii,
+    ['foo' + ++ii]: ii,
+}
+console.log(a.foo1 + ", " + a.foo2 + ", " + a.foo3)
