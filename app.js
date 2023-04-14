@@ -606,3 +606,13 @@ let a11, b11, c11 = 4, d11 = 8; // semicolon is needed to declare an initializat
 [a11,b11 = 6] = [2]
 [c11,d11] = [d11,c11]
 console.log("3. Variable a11: ", a11, "3. Variable b11: ", b11,"3. Variable c11: ", c11,"3. Variable d11:", d11)
+
+// Object Destructuring in ES6
+let obj244 = {h:100, s: true};
+let {h, s} = obj244;
+// obj244 destructured into variables
+console.log("h: ", h, ", s: ", s)
+// Destructuring simplifies assignme nt and swapping values
+let a12,b12
+({a12,b12} = {a12: "Hello",b12:"World"})
+console.log("a12: ",a12," b12: ",b12)
