@@ -590,7 +590,19 @@ console.log("Mutate 2.",anotherOne.name) // Spike
 console.log("Mutate 2.",someone.name,someone.age) // Jerry 7
 
 // Array Destructuring in ES6
-let arr = ['1','2','3']
-let [one, two,three] = arr
-
+let arr244 = ['1','2','3']
+let [one, two,three] = arr244
+// arr244 destructured into variables
 console.log("Variable one: ",one,", Variable two: ",two,", Variable three: ",three)
+
+let a245 = () => {
+    return [1,3,2]
+}
+
+let [one2, ,two2] = a245()
+console.log("2. Variable one: ", one2, a245(), "2. Variable two: ", two2)
+// Destructuring simplifies assignment and swapping values
+let a11, b11, c11 = 4, d11 = 8; // semicolon is needed to declare an initialization
+[a11,b11 = 6] = [2]
+[c11,d11] = [d11,c11]
+console.log("3. Variable a11: ", a11, "3. Variable b11: ", b11,"3. Variable c11: ", c11,"3. Variable d11:", d11)
