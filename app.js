@@ -517,7 +517,7 @@ const test = (a, b = 3, c = 42) => {
   }
 console.log("Default Parameter: ",test(5)); //50 
 
-// Object on ES6 contain properties or methods
+// Object in ES6 contain properties or methods
 let height = 5
 let health = 100
 let physicTest = {
@@ -589,3 +589,4 @@ let anotherOne = Object.assign({},someone,{name: "Spike"}) // mutating object to
 console.log("Mutate 2.",anotherOne.name) // Spike
 console.log("Mutate 2.",someone.name,someone.age) // Jerry 7
 
+// Array Destructuring in ES6
