@@ -590,3 +590,7 @@ console.log("Mutate 2.",anotherOne.name) // Spike
 console.log("Mutate 2.",someone.name,someone.age) // Jerry 7
 
 // Array Destructuring in ES6
+let arr = ['1','2','3']
+let [one, two,three] = arr
+
+console.log("Variable one: ",one,", Variable two: ",two,", Variable three: ",three)
