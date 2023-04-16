@@ -626,6 +626,7 @@ function containsAll(arr) {
     for (let k = 1; k < arguments.length; k++){
         let num = arguments[k];
         if (arr.indexOf(num) === -1) {
+            // if not found (-1)
             return false
         }
     }
@@ -634,3 +635,15 @@ function containsAll(arr) {
 let x56 = [2,4,6,7]
 console.log(containsAll(x56,2,4,7))
 console.log(containsAll(x56,6,4,9))
+// Shorter with Rest Parameter
+function containsAll2(arr,...nums) {
+    for (let num of nums) {
+        if (arr.indexOf(num) === -1) {
+            return false
+        }
+    }
+    return true
+}
+let x57 = [2,5,7,8]
+console.log("Find 2 and 8 in array x57: ",containsAll2(x57,2,8))
+console.log("Find 1 and 9 in array x57: ",containsAll2(x57,1,9))
