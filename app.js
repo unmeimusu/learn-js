@@ -759,7 +759,7 @@ class Point {
         this.y = y
     }
     static distance(a,b) {
-        // cannot be called through a class instances
+        // cannot be called through a class instances, but accessed on the class itself
         const dx = a.x - b.x
         const dy = a.y - b.y
         return Math.hypot(dx,dy)
