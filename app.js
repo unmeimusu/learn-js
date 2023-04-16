@@ -753,3 +753,18 @@ const square23 = new Rectangle34(2,5)
 console.log(square23.area)
 
 // Class with static method to create utility function
+class Point {
+    constructor(x,y) {
+        this.x = x
+        this.y = y
+    }
+    static distance(a,b) {
+        // cannot be called through a class instances
+        const dx = a.x - b.x
+        const dy = a.y - b.y
+        return Math.hypot(dx,dy)
+    }
+}
+const p153 = new Point(7,2) // p153 is a class instance
+const p253 = new Point(3,8) // p253 is a class instance
+console.log(Point.distance())
