@@ -616,7 +616,21 @@ console.log("h: ", h112, ", s: ", s112)
 let a12,b12
 ({a12,b12} = {a12: "Hello",b12:"World"})
 console.log("a12: ",a12," b12: ",b12)
-// Destructuring const object
+// Destructuring constant object
 const obj44 = {one: 1, two: 2}
 let {one: first, two: second} = obj44
-console.log(one)
+console.log(one,first,two,second)
+
+// Arguments: Object, Array-like object, Spread Operator and Rest Parameter
+function containsAll(arr) {
+    for (let k = 1; k < arguments.length; k++){
+        let num = arguments[k];
+        if (arr.indexOf(num) === -1) {
+            return false
+        }
+    }
+    return true
+}
+let x56 = [2,4,6,7]
+console.log(containsAll(x56,2,4,7))
+console.log(containsAll(x56,6,4,9))
