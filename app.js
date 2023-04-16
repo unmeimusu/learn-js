@@ -621,7 +621,7 @@ const obj44 = {one: 1, two: 2}
 let {one: first, two: second} = obj44
 console.log(one,first,two,second)
 
-// Arguments: Object, Array-like object, Spread Operator and Rest Parameter
+// Arguments: Object, Array-like object, Rest Parameter
 function containsAll(arr) {
     for (let k = 1; k < arguments.length; k++){
         let num = arguments[k];
@@ -647,3 +647,109 @@ function containsAll2(arr,...nums) {
 let x57 = [2,5,7,8]
 console.log("Find 2 and 8 in array x57: ",containsAll2(x57,2,8))
 console.log("Find 1 and 9 in array x57: ",containsAll2(x57,1,9))
+// Rest Parameter to Sum inputted Array number
+function Add(...nums){
+    let total = 0
+    for (num of nums) {
+        total += num
+    }
+    return total
+}
+console.log(Add(4,14,5,9,14));
+console.log(Add(1,2,3));
+// Another example Rest Parameter
+function sumMap(...nums) {
+    let sum = 0;
+    nums.filter(n => n % 2 == 0).map(el => sum+= el);
+    return sum;
+  }
+console.log("Sum of Even Number",sumMap(1, 2, 3, 4, 5, 6));
+
+// Spread Operator
+function myFunctionf2(w, x, y, z) {
+    console.log("w/o Spread Operator: ",w + x + y + z);
+}
+var args22 = [1, 2, 3];
+myFunctionf2.apply(null, args22.concat(4));
+// Shorter Spread Operator in Function Calls
+myFunctionf3 = (w,x,y,z) => {
+    console.log("w Spread Operator: ",w + x + y + z)
+}
+var args33 = [1,2,3]
+myFunctionf3(...args33,4)
+// Spread Operator shorten Date Function Calls
+var dateFields = [1970,0,1]
+var date = new Date(...dateFields)
+console.log(date)
+// Spread Operator in Array literals
+var arr34 = ["One", "Two", "Five"]
+
+arr34.splice(2,0,"Three")
+arr34.splice(3,0,"Four")
+console.log(arr34)
+// Shorter
+let newArr = ["Three","Four"]
+let arr35 = ["One","Two",...newArr,"Five"]
+console.log(arr35)
+// Spread Operator in Object literals
+const obj1 = {foo:'bar', x: 42}
+const obj2 = {foo:'baz', y: 5}
+
+const clonedObj = {...obj1}
+const mergedObj = {...obj1,...obj2}
+console.log("cloneObj: ", clonedObj)
+console.log("mergedObj: ", mergedObj)
+// Spread Operator to create objects
+const merge = (...objects) => ({...objects})
+let mergedObj2 = merge(obj1,obj2)
+let mergedObj3 = merge({},obj1,obj2)
+console.log(mergedObj2,mergedObj3)
+
+// Object Oriented Programming: Classes in ES6
+class Rectangle {
+    constructor(height,width) {
+        this.height = height
+        this.width = width
+    }
+}
+const square = new Rectangle(30,30)
+const poster = new Rectangle(20,30)
+console.log("Rectangle size: ",new Rectangle(30,20),"Square: ", square,"Poster: ",poster)
+// Class Expression
+var Banner = class Rectangle {
+    constructor(height,width) {
+        this.height = height
+        this.width = width
+    }
+}
+console.log("The Height of Banner: ",Banner.height)
+// Class with methods
+class Point {
+    constructor (a,b) {
+        this.x = a
+        this.y = b
+    }
+    getX() {return this.x}
+    getY() {return this.y}
+}
+const bB = new Point(2,3) 
+console.log(bB.getX(),bB.getY())
+// Class with Getter Property and Method
+class Rectangle34 {
+    constructor(height,width) {
+        this.height = height
+        this.width = width
+    }
+    get area() {
+        // getter property
+        return this.calcArea()
+    }
+    calcArea() {
+        // method
+        return this.height * this.width
+    }
+}
+const square23 = new Rectangle34(2,5)
+console.log(square23.area)
+
+// Class with static method to create utility function
