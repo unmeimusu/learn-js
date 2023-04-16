@@ -734,7 +734,7 @@ class Point {
 }
 const bB = new Point(2,3) 
 console.log(bB.getX(),bB.getY())
-// Class with Getter Property and Method
+// Class with Getter Property and Prototype Method
 class Rectangle34 {
     constructor(height,width) {
         this.height = height
@@ -762,7 +762,7 @@ class Point {
         // cannot be called through a class instances, but accessed on the class itself
         const dx = a.x - b.x
         const dy = a.y - b.y
-        return Math.hypot(dx,dy)
+        return Math.hypot(dx,dy) sqrt()
     }
 }
 const p153 = new Point(7,2) // p153 is a class instance
