@@ -845,7 +845,7 @@ for (let a of set.values()) {
     console.log(a)
 }
 
-// Async / Promises
+// setTimeout() is an old method
 setTimeout(function(){
     console.log("Work 1");
     setTimeout(function() {
@@ -853,7 +853,7 @@ setTimeout(function(){
     }, 5000);
 },5000);
 console.log("End")
-
+// Promises way better
 new Promise(function(resolve, reject){
     // Work
     if (success)
@@ -861,3 +861,4 @@ new Promise(function(resolve, reject){
     else
         reject(Error("failure"))
 })
+
