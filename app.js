@@ -830,10 +830,17 @@ function main425() {
     ]);
     //add the new pair to the map
     employees.set(name,position)
-    for (var i of employees){
+    for (var i of employees){ // can use ".entries()" but still work same
         //your code for the output
-        console.log(i[0] + " : " + i[1])
+        console.log(i[0] + " : " + i[1], ", Map Size: ",employees.size,", Has Bob as key: ",employees.has("Alpha"))
     }
 }
 main425()
 
+// Set in ES6 : Array to hold value without repetitions
+let set = new Set()
+set.add(5).add(9).add(59).add(9)
+console.log(set.has(9))
+for (let {a} of set.) {
+    console.log(" : ", a)
+}
