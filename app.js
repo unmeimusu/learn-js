@@ -815,3 +815,9 @@ let dog = new Dog("Hely",7)
 console.log(dog.speak())
 
 // Map : Array of Array with key and value
+let map = new Map()
+map.set('k1','v1').set('k2','v2')
+console.log("k1 value: ",map.get('k1'),"map has k2: ",map.has('k2'))
+for (let kv of map.entries()) {
+    console.log(kv[0] + " : " + k[1])
+}
