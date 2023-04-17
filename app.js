@@ -841,6 +841,6 @@ main425()
 let set = new Set()
 set.add(5).add(9).add(59).add(9)
 console.log(set.has(9))
-for (let {a} of set.) {
+for (let {a} of set) {
     console.log(" : ", a)
 }
