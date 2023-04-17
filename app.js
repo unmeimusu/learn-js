@@ -819,18 +819,14 @@ let map = new Map()
 map.set('k1','v1').set('k2','v2')
 console.log("k1 value: ",map.get('k1'),"map has k2: ",map.has('k2'))
 for (let kv of map.entries()) {
-    console.log(kv[0] + " : " + k[1])
+    console.log(kv[0] + " : " + kv[1])
 }
 // Map : Array of Array with key and value
-function main() {
-    var name = "Bob";
-    var position = "Developer";
+function main425() {
+    var name = "Minotaur";
+    var position = "Monster";
     let employees = new Map([
-    ["Richard", "Developer"],
-    ["Maria", "SEO Specialist"],
-    ["Tom", "Product Manager"],
-    ["David", "Accountant"],
-    ["Sophia", "HR Manager"]
+    ["Alpha", "Defender"],
     ]);
     //add the new pair to the map
     employees.set(name,position)
@@ -839,3 +835,5 @@ function main() {
         console.log(i[0] + " : " + i[1])
     }
 }
+main425()
+
