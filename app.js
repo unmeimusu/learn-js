@@ -889,9 +889,9 @@ asyncFunc("Work 1")
 }, function(error) {
     console.log(error)
 })
-.then(function(result) {
+.then(function (result) {
     console.log(result)
-}, function(result) {
+}, function (result) {
     console.log(result)
 }, function (error) {
     console.log(error)
