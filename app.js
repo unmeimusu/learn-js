@@ -802,10 +802,14 @@ class Animal {
     }
 }
 class Dog extends Animal {
+    constructor(name,age) {
+        super(name) // super to call name property from parent class
+        this.age = age
+    }
     speak() {
         super.speak() // super is to call speak prototype method from parent class
-        console.log(this.name + ` bark.`)
+        console.log(this.name + ` bark.`+ " age: " + this.age)
     }
 }
-let dog = new Dog("Hely")
-console.log(dog.speak())
+let dog = new Dog("Hely",7)
+console.log(dog.age)
