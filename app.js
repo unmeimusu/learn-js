@@ -821,3 +821,21 @@ console.log("k1 value: ",map.get('k1'),"map has k2: ",map.has('k2'))
 for (let kv of map.entries()) {
     console.log(kv[0] + " : " + k[1])
 }
+// Map : Array of Array with key and value
+function main() {
+    var name = "Bob";
+    var position = "Developer";
+    let employees = new Map([
+    ["Richard", "Developer"],
+    ["Maria", "SEO Specialist"],
+    ["Tom", "Product Manager"],
+    ["David", "Accountant"],
+    ["Sophia", "HR Manager"]
+    ]);
+    //add the new pair to the map
+    employees.set(name,position)
+    for (var i of employees){
+        //your code for the output
+        console.log(i[0] + " : " + i[1])
+    }
+}
