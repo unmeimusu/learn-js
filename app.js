@@ -862,7 +862,6 @@ new Promise(function(resolve, reject){
     else
         reject(Error("failure"))
 })
-
 function asyncFunc(work) {
     return new Promise(function(resolve,reject){
         if (work === "")
@@ -872,4 +871,4 @@ function asyncFunc(work) {
         },2000)
     })
 }
-
+// Async Await : way better + try catch error
