@@ -841,6 +841,15 @@ main425()
 let set = new Set()
 set.add(5).add(9).add(59).add(9)
 console.log(set.has(9))
-for (let {a} of set) {
-    console.log(" : ", a)
+for (let a of set.values()) {
+    console.log(a)
 }
+
+// Async / Promises
+setTimeout(function(){
+    console.log("Work 1");
+    setTimeout(function() {
+        console.log("Work 2")
+    }, 5000);
+},5000);
+console.log("End")
