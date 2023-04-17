@@ -762,7 +762,7 @@ class Point {
         // cannot be called through a class instances, but accessed on the class itself
         const dx = a.x - b.x
         const dy = a.y - b.y
-        return Math.hypot(dx,dy) sqrt()
+        return Math.hypot(dx,dy) // pythagoras sqrt(dx^2+dy^2)
     }
 }
 const p153 = new Point(7,2) // p153 is a class instance
