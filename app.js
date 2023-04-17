@@ -792,3 +792,20 @@ class Exams {
     }
 }
 main234()
+// Inheritance in  ES6 : Child of a class inherits the properties and methods
+class Animal {
+    constructor(name) {
+        this.name = name
+    }
+    speak() {
+        console.log(this.name + ` make a noise.`)
+    }
+}
+class Dog extends Animal {
+    speak() {
+        super.speak() // super is to call speak prototype method from parent class
+        console.log(this.name + ` bark.`)
+    }
+}
+let dog = new Dog("Hely")
+console.log(dog.speak())
