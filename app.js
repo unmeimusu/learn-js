@@ -790,6 +790,5 @@ class Exams {
         let av = Math.round(total/3)
         return av
     }
-
 }
 main234()
