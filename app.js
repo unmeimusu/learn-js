@@ -779,10 +779,8 @@ function main234() {
 
     console.log(Exams.average(exam1,exam2,exam3))   
 }
-
 class Exams {
     constructor() {
-
     }
     static average(...scores) {
         let total = 0
@@ -794,5 +792,4 @@ class Exams {
     }
 
 }
-
 main234()
