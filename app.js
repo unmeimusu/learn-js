@@ -813,3 +813,5 @@ class Dog extends Animal {
 }
 let dog = new Dog("Hely",7)
 console.log(dog.speak())
+
+// Map : Array of Array with key and value
