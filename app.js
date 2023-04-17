@@ -853,3 +853,11 @@ setTimeout(function(){
     }, 5000);
 },5000);
 console.log("End")
+
+new Promise(function(resolve, reject){
+    // Work
+    if (success)
+        resolve(result)
+    else
+        reject(Error("failure"))
+})
