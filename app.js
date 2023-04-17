@@ -798,7 +798,7 @@ class Animal {
         this.name = name
     }
     speak() {
-        console.log(this.name + ` make a noise.`)
+        return this.name + ` make a noise.`
     }
 }
 class Dog extends Animal {
@@ -808,8 +808,8 @@ class Dog extends Animal {
     }
     speak() {
         super.speak() // super is to call speak prototype method from parent class
-        console.log(this.name + ` bark.`+ " age: " + this.age)
+        return this.name + ` bark.`+ " age: " + this.age
     }
 }
 let dog = new Dog("Hely",7)
-console.log(dog.age)
+console.log(dog.speak())
