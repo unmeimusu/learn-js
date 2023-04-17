@@ -753,7 +753,7 @@ const square23 = new Rectangle34(2,5)
 console.log(square23.area)
 
 // Class with static method to create utility function
-class Point {
+class Point3 {
     constructor(x,y) {
         this.x = x
         this.y = y
@@ -765,6 +765,34 @@ class Point {
         return Math.hypot(dx,dy) // pythagoras sqrt(dx^2+dy^2)
     }
 }
-const p153 = new Point(7,2) // p153 is a class instance
-const p253 = new Point(3,8) // p253 is a class instance
-console.log(Point.distance())
+const p153 = new Point3(7,2) // p153 is a class instance
+const p253 = new Point3(3,8) // p253 is a class instance
+console.log(Point3.distance(p153,p253))
+// Example class with static method
+function main234() {
+    var iU = 79
+    var iW = 89
+    var iD = 86
+    var exam1 = parseInt(iU,10)
+    var exam2 = parseInt(iW,10)
+    var exam3 = parseInt(iD,10)
+
+    console.log(Exams.average(exam1,exam2,exam3))   
+}
+
+class Exams {
+    constructor() {
+
+    }
+    static average(...scores) {
+        let total = 0
+        for (let sc of scores) {
+            total += sc
+        }
+        let av = Math.round(total/3)
+        return av
+    }
+
+}
+
+main234()
