@@ -883,18 +883,18 @@ function asyncFunc(work) {
     });
 }
 asyncFunc("Work 122") // Task 1
-.then(function(result) {
-    console.log(result);
-    return asyncFunc("Work 222"); // Task 2
-}, function(error) {
-    console.log(error);
-})
-.then(function(result) {
-    console.log(result);
-    return asyncFunc("Work 322"); // Task 3
-}, function(error) {
-    console.log(error);
-});
+    .then(function(result) {
+        console.log(result);
+        return asyncFunc("Work 222"); // Task 2
+    }, function(error) {
+        console.log(error);
+    })
+    .then(function(result) {
+        console.log(result);
+        return asyncFunc("Work 322"); // Task 3
+    }, function(error) {
+        console.log(error);
+    });
 console.log("End22");
 // Example 2 Promise
 function foo() {
@@ -907,7 +907,7 @@ function foo() {
     })
 }
 
-// Iterators & Generators : Symbol.iterator, default type of iterator for an object
+// Iterators : Symbol.iterator, default type of iterator for an object
 let myIterableObj = {
     [Symbol.iterator] : function* () {
         yield 1; yield 2; yield 3;
@@ -926,3 +926,19 @@ console.log(gen.next().value)
 console.log(gen.next().value)
 console.log(gen.next().value)
 console.log(gen.next().value)
+// Iterator & Generator : Nest Generator Functions
+const arr567 = ["0","1","4","a","9","c","16"]
+const my_obj = {
+    [Symbol.iterator]: function*() {
+        for(let index of arr567) {
+            yield `${index}`
+        }
+    }
+}
+
+const all = [...my_obj]
+    .map(i => parseInt(i,10))
+    .map(Math.sqrt)
+    .filter((i)=> i<5)
+    .reduce((i,d)=>i+d)
+console.log(all)
