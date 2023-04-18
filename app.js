@@ -873,27 +873,25 @@ function asyncFunc(work) {
 }
 // Async Await : way better + try catch error
 function asyncFunc(work) {
-    return new Promise(function(resolve,reject) {
+    return new Promise(function(resolve, reject) {
         if (work === "")
-            reject(Error("Nothing"))
+            reject(Error("Nothing"));
         setTimeout(function() {
-            resolve()
-        })
-    })
+            resolve(work);
+        }, 1000);
+    });
 }
-
-asyncFunc("Work 1")
+asyncFunc("Work 1") // Task 1
 .then(function(result) {
-    console.log(result)
-    return asyncFunc("Work 2")
+    console.log(result);
+    return asyncFunc("Work 2"); // Task 2
 }, function(error) {
-    console.log(error)
+    console.log(error);
 })
-.then(function (result) {
-    console.log(result)
-}, function (result) {
-    console.log(result)
-}, function (error) {
-    console.log(error)
+.then(function(result) {
+    console.log(result);
+    return asyncFunc("Work 3"); // Task 3
+}, function(error) {
+    console.log(error);
 });
-console.log("End")
+console.log("End");
