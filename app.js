@@ -936,9 +936,10 @@ const my_obj = {
     }
 }
 
-const all = [...my_obj]
+const all4 = [...my_obj]
     .map(i => parseInt(i,10))
     .map(Math.sqrt)
     .filter((i)=> i<5)
     .reduce((i,d)=>i+d)
-console.log(all)
+console.log(all4)
+// You can exit and re-enter generator functions, and their variable bindings will be saved across re-entrances.
