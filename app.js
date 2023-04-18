@@ -81,9 +81,9 @@ console.log(td.checkData())
 function prsn2(name, age) {
     this.name = name
     this.age = age
-    this.yearOfBirth = bornYear
+    this.yearOfBirth = bornYear2
 }
-function bornYear() {
+function bornYear2() {
     return 2023 - this.age // 2023 is the current year
 }
 
@@ -153,7 +153,7 @@ courses5[3] = "IMBA"
 
 console.log(courses5)
 console.log(courses5.length) // length return the number of array's property as an object
-courses6 = courses4.concat(courses5) // combining arrays to join and create an entirely new array 
+let courses6 = courses4.concat(courses5) // combining arrays to join and create an entirely new array 
 console.log(courses6) 
 
 // 
@@ -271,7 +271,7 @@ x.style.backgroundColor = "yellow"
 
 // Changing all paragraph background color inside listp
 var s = document.getElementsByTagName("p")
-for (i = 0; i < s.length; i++) {
+for (let i = 0; i < s.length; i++) {
     s[i].style.backgroundColor = "lightblue"
 }
 
@@ -672,7 +672,7 @@ function myFunctionf2(w, x, y, z) {
 var args22 = [1, 2, 3];
 myFunctionf2.apply(null, args22.concat(4));
 // Shorter Spread Operator in Function Calls
-myFunctionf3 = (w,x,y,z) => {
+let myFunctionf3 = (w,x,y,z) => {
     console.log("w Spread Operator: ",w + x + y + z)
 }
 var args33 = [1,2,3]
@@ -872,8 +872,8 @@ function asyncFunc(work) {
         },2000)
     })
 }
-// Async Await : way better + try catch error
-function asyncFunc(work) {
+
+function asyncFunc2(work) {
     return new Promise(function(resolve, reject) {
         if (work === "")
             reject(Error("Nothing22"));
@@ -882,16 +882,16 @@ function asyncFunc(work) {
         }, 1000);
     });
 }
-asyncFunc("Work 122") // Task 1
+asyncFunc2("Work 122") // Task 1
     .then(function(result) {
         console.log(result);
-        return asyncFunc("Work 222"); // Task 2
+        return asyncFunc2("Work 222"); // Task 2
     }, function(error) {
         console.log(error);
     })
     .then(function(result) {
         console.log(result);
-        return asyncFunc("Work 322"); // Task 3
+        return asyncFunc2("Work 322"); // Task 3
     }, function(error) {
         console.log(error);
     });
@@ -906,6 +906,8 @@ function foo() {
             reject("Something went wrong33")
     })
 }
+
+// Async Await : way better + try catch error
 
 // Iterators : Symbol.iterator, default type of iterator for an object
 let myIterableObj = {
@@ -943,3 +945,7 @@ const all4 = [...my_obj]
     .reduce((i,d)=>i+d)
 console.log(all4)
 // You can exit and re-enter generator functions, and their variable bindings will be saved across re-entrances.
+
+// Modules
+import * as math from "./module.js"
+console.log(`2p = + ${math.sum215(math.pi,math.pi)}`)
