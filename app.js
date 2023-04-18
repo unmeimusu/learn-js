@@ -947,5 +947,3 @@ console.log(all4)
 // You can exit and re-enter generator functions, and their variable bindings will be saved across re-entrances.
 
 // Modules
-import * as math from "./module.js"
-console.log(`2p = + ${math.sum215(math.pi,math.pi)}`)
