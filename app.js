@@ -853,19 +853,20 @@ setTimeout(function(){
         console.log("Work 2")
     }, 5000);
 },5000);
-console.log("End")
+console.log("End1")
 // Promises : way better
 new Promise(function(resolve, reject){
+    let success = "Yes!11"
     // Work
     if (success)
         resolve(result)
     else
-        reject(Error("failure"))
+        reject(Error("failure11"))
 })
 function asyncFunc(work) {
     return new Promise(function(resolve,reject){
         if (work === "")
-            reject(Error("Nothing"))
+            reject(Error("Nothing11"))
         setTimeout(function() {
             resolve(work)
         },2000)
@@ -875,23 +876,41 @@ function asyncFunc(work) {
 function asyncFunc(work) {
     return new Promise(function(resolve, reject) {
         if (work === "")
-            reject(Error("Nothing"));
+            reject(Error("Nothing22"));
         setTimeout(function() {
             resolve(work);
         }, 1000);
     });
 }
-asyncFunc("Work 1") // Task 1
+asyncFunc("Work 122") // Task 1
 .then(function(result) {
     console.log(result);
-    return asyncFunc("Work 2"); // Task 2
+    return asyncFunc("Work 222"); // Task 2
 }, function(error) {
     console.log(error);
 })
 .then(function(result) {
     console.log(result);
-    return asyncFunc("Work 3"); // Task 3
+    return asyncFunc("Work 322"); // Task 3
 }, function(error) {
     console.log(error);
 });
-console.log("End");
+console.log("End22");
+// Example 2 Promise
+function foo() {
+    return new Promise((resolve,reject) => {
+        let result  = getSomeResult()
+        if (result)
+            resolve("Success33")
+        else
+            reject("Something went wrong33")
+    })
+}
+
+// Iterators & Generators : Symbol.iterator, default type of iterator for an object
+let myIterableObj = {
+    [Symbol.iterator] : function* () {
+        yield 1; yield 2; yield 3;
+    }
+}
+console.log([...myIterableObj])
